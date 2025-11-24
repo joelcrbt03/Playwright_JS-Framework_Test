@@ -6,8 +6,14 @@ class CommonActions extends BasePage {
   }
 
   async openURL(url) {
-    await super.goto(url); // internally uses BasePage.goto
-    return await this.page.waitForLoadState('domcontentloaded') // wait until DOM is ready
+    try {
+      await super.goto(url);                  // Uses BasePage navigation
+      await this.waitForPageToLoad();         // Ensures DOM readiness
+      this.logger.info(`[TEST_INFO] Opened URL: ${url}`);
+    } catch (error) {
+      this.logger.error(`[ERROR] Failed to open: ${url} | ${error}`);
+      throw error;
+    }
   }
 }
 
