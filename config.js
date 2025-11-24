@@ -1,4 +1,4 @@
-const ENV = process.env.TEST_ENV || 'DEV';
+const ENV = process.env.ENV || 'DEV';
 
 const config = {
   DEV: {
