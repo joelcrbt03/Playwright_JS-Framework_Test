@@ -16,7 +16,7 @@ test.describe('Basic Login Flow', () => {
   });
 
   test('[TC 01] verify successful log in', async ({ login }) => {
-    await login.verifyLogin("Success");
+    await login.verifySuccessLogin("Success");
   });
 
   test('[TC 02] logout account', async ({ login }) => {
@@ -27,7 +27,11 @@ test.describe('Basic Login Flow', () => {
 
 test.describe('Negative Login Flow', () => {
 
-  test('[TC 01] login using invalid credentials', async ({ login }) => {
-    // TO DO:
+  test.beforeEach('[Pre-requisite] login using invalid credentials', async ({ login }) => {
+    await login.loginToApp(testData.invalidAccount);
   })
+
+  test('[TC 01] verify unsuccessful log in', async ({ login }) => {
+    // TODO
+  });
 });
