@@ -1,0 +1,21 @@
+2025-11-21 15:51:49 [INFO]: [PASS] Element "button[id=submit]" is visible!
+2025-11-21 15:51:49 [INFO]: TEST LANG
+2025-11-21 15:51:49 [INFO]: [PASS] Element "button[id=submit]" not visible!
+2025-11-21 15:53:37 [INFO]: [PASS] Element "button[id=submit]" is visible!
+2025-11-21 15:53:37 [INFO]: TEST LANG
+2025-11-21 15:53:37 [INFO]: [PASS] Element "button[id=submit]" not visible!
+2025-11-21 15:53:39 [INFO]: [PASS] Element "button[id=submit]" is visible!
+2025-11-21 15:53:39 [INFO]: TEST LANG
+2025-11-21 15:53:39 [INFO]: [PASS] Element "button[id=submit]" not visible!
+2025-11-21 15:57:51 [INFO]: [PASS] Element "button[id=submit]" is visible!
+2025-11-21 15:57:52 [INFO]: TEST LANG
+2025-11-21 15:57:52 [INFO]: [PASS] Element "button[id=submit]" not visible!
+2025-11-21 15:57:54 [INFO]: [PASS] Element "button[id=submit]" is visible!
+2025-11-21 15:57:54 [INFO]: TEST LANG
+2025-11-21 15:57:54 [INFO]: [PASS] Element "button[id=submit]" not visible!
+2025-11-21 16:00:31 [INFO]: [PASS] Element "button[id=submit]" is visible!
+2025-11-21 16:00:32 [INFO]: TEST LANG
+2025-11-21 16:00:32 [INFO]: [PASS] Element "button[id=submit]" not visible!
+2025-11-21 16:00:33 [INFO]: [PASS] Element "button[id=submit]" is visible!
+2025-11-21 16:00:34 [INFO]: TEST LANG
+2025-11-21 16:00:34 [INFO]: [PASS] Element "button[id=submit]" not visible!

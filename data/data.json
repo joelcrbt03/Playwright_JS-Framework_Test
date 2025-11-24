@@ -1,0 +1,14 @@
+{
+  "adminAccount": {
+    "username": "admin",
+    "password": "admin"
+  },
+  "standardAccount": {
+    "username": "student",
+    "password": "Password123"
+  },
+  "invalidAccount": {
+    "username": "wrong",
+    "password": "1234"
+  }
+}
