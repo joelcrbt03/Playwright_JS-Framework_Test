@@ -7,5 +7,9 @@ export default defineConfig({
     headless: false,
     screenshot: 'only-on-failure'
     // video: 'retain-on-failure'
-  }
+  },
+  reporter: [
+    ['list'],
+    ['allure-playwright']
+  ]
 });
