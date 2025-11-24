@@ -1,4 +1,4 @@
-# Playwright JS Framework Test
+# Playwright JS Framework Test - Practice Repo
 
 A modular and scalable UI test automation framework built using **Playwright (JavaScript)** with the following key concepts:
 - Page Object Model (POM) – locators separated from actions  
