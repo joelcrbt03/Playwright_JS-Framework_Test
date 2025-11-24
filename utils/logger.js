@@ -8,10 +8,12 @@ const customFormat = format.combine(
         // If message contains [PASS], color it green
         if (message.includes('[PASS]')) {
             message = `\x1b[32m${message}\x1b[0m`; // Green
-        } else if (message.includes('[CLICK]') || message.includes('[INPUT]') || message.includes('[KEY]')) {
-            message = `\x1b[33m${message}\x1b[0m`; // Yellow
         } else if (message.includes('[FAIL]')) {
             message = `\x1b[31m${message}\x1b[0m`; // Red
+        } else if (message.includes('[CLICK]') || message.includes('[INPUT]') || message.includes('[KEY]')) {
+            message = `\x1b[33m${message}\x1b[0m`; // Yellow
+        } else if (message.includes('[SLEEP]') || message.includes('[TEST_INFO]')) {
+            message = `\x1b[34m${message}\x1b[0m`; // Blue
         }
         return `${info.timestamp} [${info.level.toUpperCase()}]: ${message}`;
     })
