@@ -7,13 +7,13 @@ const customFormat = format.combine(
         let message = info.message;
         // If message contains [PASS], color it green
         if (message.includes('[PASS]')) {
-            message = `\x1b[32m${message}\x1b[0m`; // Green
-        } else if (message.includes('[FAIL]')) {
-            message = `\x1b[31m${message}\x1b[0m`; // Red
+            message = `\x1b[32m${message}\x1b[0m`; // Green | For Pass
+        } else if (message.includes('[FAIL]') || message.includes('[ERROR]')) {
+            message = `\x1b[31m${message}\x1b[0m`; // Red | For Error
         } else if (message.includes('[CLICK]') || message.includes('[INPUT]') || message.includes('[KEY]')) {
-            message = `\x1b[33m${message}\x1b[0m`; // Yellow
-        } else if (message.includes('[SLEEP]') || message.includes('[TEST_INFO]')) {
-            message = `\x1b[34m${message}\x1b[0m`; // Blue
+            message = `\x1b[33m${message}\x1b[0m`; // Yellow | For Actions
+        } else if (message.includes('[SLEEP]') || message.includes('[INFO]')) {
+            message = `\x1b[34m${message}\x1b[0m`; // Blue | For info
         }
         return `${info.timestamp} [${info.level.toUpperCase()}]: ${message}`;
     })
