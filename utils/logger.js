@@ -12,7 +12,7 @@ const customFormat = format.combine(
             message = `\x1b[31m${message}\x1b[0m`; // Red | For Error
         } else if (message.includes('[CLICK]') || message.includes('[INPUT]') || message.includes('[KEY]')) {
             message = `\x1b[33m${message}\x1b[0m`; // Yellow | For Actions
-        } else if (message.includes('[SLEEP]') || message.includes('[INFO]')) {
+        } else if (message.includes('SLEEP') || message.includes('INFO')) {
             message = `\x1b[34m${message}\x1b[0m`; // Blue | For info
         }
         return `${info.timestamp} [${info.level.toUpperCase()}]: ${message}`;
