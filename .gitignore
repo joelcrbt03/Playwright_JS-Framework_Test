@@ -3,4 +3,4 @@ allure-results/
 screenshots/
 test-results/
 playwright-report/
-logs/
+test-logs/
