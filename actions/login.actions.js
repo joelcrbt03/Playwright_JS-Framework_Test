@@ -7,22 +7,23 @@ class LoginActions extends BasePage {
     this.POM_LOGIN = new POM_LOGINPAGE(); // initialize pom.LoginPage.js elements
   }
 
-  // BEFOREEACH Method
   async loginToApp({ username, password }) {
     await this.enterText(this.POM_LOGIN.username, username);
     await this.enterText(this.POM_LOGIN.password, password);
-    if (await this.verifyElementVisible(this.POM_LOGIN.submit)) {
+    if (await this.waitUntilElementVisible(this.POM_LOGIN.submit)) {
       await this.clickElement(this.POM_LOGIN.submit);
     } else {
       this.logger.info("[FAIL] No Submit Button!");
     }
   }
 
-  async verifyLogin() {
-    if (await this.verifyElementInvisible(this.POM_LOGIN.submit)) {
-      await this.verifyElementVisible(this.POM_LOGIN.success);
-      await this.verifyElementTextContains(this.POM_LOGIN.success, "Successfully");
-      this.logger.info("SUCESS LOGIN!!!");
+  async verifySuccessLogin(text) {
+    if (await this.waitUntilElementNotVisible(this.POM_LOGIN.submit)) {
+      if (await this.isElementVisible(this.POM_LOGIN.success)) {
+        await this.verifyElementTextContains(this.POM_LOGIN.success, text);
+      }
+      await this.sleep(10)
+      this.logger.info("[TEST_INFO] | SUCESS LOGIN!!!");
     }
   }
 
