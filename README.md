@@ -1,12 +1,11 @@
 # Playwright JS Framework Test - Practice Repo
 
-A modular and scalable UI test automation framework built using **Playwright (JavaScript)** with the following key concepts:
+A modular and scalable UI test automation practice framework built using **Playwright (JavaScript)** with the following key concepts:
 - Page Object Model (POM) – locators separated from actions  
 - Actions layer – business workflows  
 - Fixtures – dependency injection of common actions  
 - Config + test data JSON – environment and user-data management  
 - Reusable utilities (logger, etc.)  
-- Support for DEV / QA / PRD environments  
 
 ---
 
@@ -33,12 +32,16 @@ A modular and scalable UI test automation framework built using **Playwright (Ja
 ---
 
 ## 📥 Running Test
-- Run all tests (headless):
+- Run all tests (headless using default test url):
    ```bash
-   npm test
+   npm run test
 - Run tests with browser UI (headed):
    ```bash
    npm run test:headed
+- Run test in different test url (saucedemo):
+   ```bash
+   npm run test:url02
+   npm run test:url02:headed
 - Run a single test file:
    ```bash
    npx playwright test tests/login.spec.js
