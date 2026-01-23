@@ -1,13 +1,13 @@
-const ENV = process.env.ENV || 'DEV';
+const ENV = process.env.ENV || 'TestURL01';
 
 const config = {
-  DEV: {
+  TestURL01: {
     baseURL: 'https://practicetestautomation.com/practice-test-login/',
   },
-  STG: {
-    baseURL: 'https://stage.example.com/login',
+  TestURL02: {
+    baseURL: 'https://www.saucedemo.com/',
   },
-  PRD: {
+  TestURL03: {
     baseURL: 'https://example.com/login',
   },
 };
