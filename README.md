@@ -10,18 +10,6 @@ A modular and scalable UI test automation framework built using **Playwright (Ja
 
 ---
 
-## 🧩 Features
-
-- Cross-browser execution (Chromium, Firefox, WebKit)  
-- Clean separation of concerns: locators → actions → tests  
-- Reusable logger via BasePage (no need to import logger in every action)  
-- Environment‐aware base URLs (DEV / QA / PRD)  
-- Centralized JSON test data  
-- Support for sequential flows (`test.describe.serial`) and independent tests  
-- Easy run commands and UI mode for debugging  
-
----
-
 ## ⚙️ Prerequisites
 
 - Node.js v18+  
