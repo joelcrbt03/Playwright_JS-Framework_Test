@@ -46,7 +46,8 @@ class BasePage {
 
   /* 
   ----------------------------------------                   
-            VERIFY ELEMENTS                    
+      ELEMENT VISIBILITY VALIDATIONS
+      - returns true/false                   
   ---------------------------------------- 
                                         */
   async isElementVisible(locator) {
@@ -71,13 +72,20 @@ class BasePage {
       return false;
     }
   }
+
+  /* 
+  ----------------------------------------                   
+            ELEMENT ASSERTIONS                    
+  ---------------------------------------- 
+                                        */
   async verifyElementTextContains(locator, expectedText) {
     const element = this.page.locator(locator);
     try {
+      const actualText = await this.getText(locator);
       await expect(element).toContainText(expectedText);
-      this.logger.info(`[PASS] | Expected text "${expectedText}" found in element "${locator}"! Actual text: "${await this.getText(locator)}"`);
+      this.logger.info(`[PASS] | Expected text "${expectedText}" found in element "${locator}"! Actual text: "${actualText}"`);
     } catch (error) {
-      this.logger.error(`[FAIL] | Expected text NOT found!\nExpected Text: "${expectedText}" \nActual text: "${await this.getText(locator)} \nReason: ${error}"`);
+      this.logger.error(`[FAIL] | Expected text NOT found!\nExpected Text: "${expectedText}" \nActual text: "${actualText}" \nReason: ${error}`);
       throw error;
     }
   }
