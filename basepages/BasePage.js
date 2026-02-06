@@ -17,16 +17,20 @@ class BasePage {
   ---------------------------------------- 
                                         */
   async clickElement(locator) {
-    await this.page.locator(locator).click();
-    this.logger.info(`[CLICK] | Element "${locator}" clicked!`);
+    this.logger.info(`[CLICK] | Element "${locator}"`);
+    return await this.page.locator(locator).click();
   }
   async doubleClickElement(locator) {
-    await this.page.locator(locator).dblclick();
-    this.logger.info(`[DOUBLE_CLICK] | Element "${locator}" doubled-clicked!`);
+    this.logger.info(`[DOUBLE_CLICK] | Element "${locator}"`);
+    return await this.page.locator(locator).dblclick();
   }
-  async pressKey(locator, key) {
-    this.logger.info(`[KEY] | '${key}'`);
+  async pressKeyOnElement(locator, key) {
+    this.logger.info(`[ELEMENT + KEY] | '${locator}' + '${key}'`);
     return await this.page.press(locator, key)
+  }
+  async pressKeyboard(key) {
+    this.logger.info(`[KEYBOARD] | '${key}'`);
+    return await this.page.keyboard.press(key)
   }
 
   /* 
