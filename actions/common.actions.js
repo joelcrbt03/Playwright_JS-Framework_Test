@@ -1,17 +1,20 @@
-const BasePage = require('../BasePage/BasePage');
+const BasePage = require('../basepages/BasePage');
+const { getBaseURL } = require('../config');
 
 class CommonActions extends BasePage {
   constructor(page) {
     super(page);
   }
 
-  async openURL(url) {
+  async openURL() {
+    const baseURL = getBaseURL();
+
     try {
-      await super.goto(url);                  // Uses BasePage navigation
-      await super.waitForPageToLoad();         // Ensures DOM readiness
-      this.logger.info(`[TEST_INFO] Opened URL: ${url}`);
+      await super.goto(baseURL);            // Uses BasePage navigation
+      await super.waitForPageToLoad();      // Ensures DOM readiness
+      this.logger.info(`[START_TEST] | Opened URL: ${baseURL}`);
     } catch (error) {
-      this.logger.error(`[ERROR] Failed to open: ${url} | ${error}`);
+      this.logger.error(`[ERROR] | Failed to open: ${(baseURL)} | ${error}`);
       throw error;
     }
   }
