@@ -1,4 +1,4 @@
-const BasePage = require('../BasePage/BasePage');
+const BasePage = require('../basepages/BasePage');
 const HomePage = require('../pageobject/pom.HomePage');
 
 class HomeActions extends BasePage {

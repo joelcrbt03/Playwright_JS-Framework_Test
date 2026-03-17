@@ -4,7 +4,7 @@ class POM_LOGINPAGE {
     this.password = 'input[id=password]';
     this.submit = 'button[id=submit]';
     this.error = 'div[id=error]';
-    this.success = 'h1[class=post-title]';
+    this.successText = 'h1[class=post-title]';
     this.logoutBtn = "//a[text()='Log out']"
   }
 }

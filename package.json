@@ -4,13 +4,18 @@
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
+    "test:url02": "cross-env ENV=TestURL02 playwright test",
+    "test:url03": "cross-env ENV=TestURL03 playwright test",
+    "test:url02:headed": "cross-env ENV=TestURL02 playwright test --headed",
+    "test:url03:headed": "cross-env ENV=TestURL03 playwright test --headed",
     "allure:generate": "allure generate ./allure-results --clean",
     "allure:open": "allure open ./allure-report"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.1",
     "allure-commandline": "^2.34.1",
-    "allure-playwright": "^3.4.2"
+    "allure-playwright": "^3.4.2",
+    "cross-env": "^10.1.0"
   },
   "dependencies": {
     "winston": "^3.18.3"
