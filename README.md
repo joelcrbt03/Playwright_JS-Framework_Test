@@ -29,6 +29,7 @@ A modular and scalable UI test automation practice framework built using **Playw
 3. Install Playwright browsers:
    ```bash
    npx playwright install
+
 ---
 
 ## 📥 Running Test
@@ -39,9 +40,25 @@ A modular and scalable UI test automation practice framework built using **Playw
    ```bash
    npm run test:headed
 - Run test in different test url (saucedemo):
+   > (Pre-Requisite) Install cross-env 
+   ```bash
+   npm install --save-dev cross-env
+   ```  
+   > Run Command
    ```bash
    npm run test:url02
    npm run test:url02:headed
 - Run a single test file:
    ```bash
    npx playwright test tests/login.spec.js
+
+---
+
+## 📝 Allure Report
+- Install Allure 
+   ```bash
+   npm install -g allure-commandline
+   npm install -D allure-playwright
+- Generate & Open Report
+   ```bash
+   npm run allure:report
