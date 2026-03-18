@@ -1,4 +1,4 @@
-class POM_LOGINPAGE {
+class POM_BASICLOGINPAGE {
   constructor() {
     this.username_field = 'input[id=username]';
     this.password_field = 'input[id=password]';
@@ -9,4 +9,4 @@ class POM_LOGINPAGE {
   }
 }
 
-module.exports = POM_LOGINPAGE;
+module.exports = POM_BASICLOGINPAGE;
