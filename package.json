@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "playwright test",
-    "test:basiclogin": "cross-env ENV=TestURL01 playwright test tests/testautomation_site",
+    "test:basiclogin": "playwright test tests/testautomation_site",
     "test:saucedemo": "cross-env ENV=TestURL02 playwright test tests/saucedemo_site",
     "allure:generate": "allure generate ./allure-results --clean",
     "allure:open": "allure open ./allure-report",
