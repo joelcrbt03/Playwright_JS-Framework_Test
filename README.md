@@ -53,7 +53,8 @@ A modular and scalable UI test automation practice framework built using **Playw
    npm run test:saucedemo
    npm run test:saucedemo -- --headed
    ```
-- Run specific test cases
+### Run specific test cases
+
    > **[RECOMMENDED]** Specific @tag
    ```bash
    npm run test:basiclogin -- --grep "@ID-001"
@@ -78,7 +79,7 @@ A modular and scalable UI test automation practice framework built using **Playw
    ```bash
    npm playwright test tests/testautomation/basicLogin.spec.js
    ```
-   
+
 ---
 
 ## 📝 Allure Report
