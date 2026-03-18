@@ -3,7 +3,7 @@ const fs = require('fs');
 const testData = JSON.parse(fs.readFileSync('./data/data.json'));
 
 test.beforeEach(async ({ common, saucedemoLogin }) => {
-  await common.openURL();
+  await common.openURL('TestURL02');
   // await saucedemoLogin.loginApp(testData.standardAccount);
 });
 
