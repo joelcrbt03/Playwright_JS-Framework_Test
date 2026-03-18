@@ -16,4 +16,4 @@ function getBaseURL() {
   return config[ENV].baseURL;
 }
 
-module.exports = { getBaseURL };
+module.exports = { getBaseURL, config };
