@@ -37,7 +37,12 @@ test.describe('Negative Login Flow', () => {
     await login._loginToApp(testData.invalidAccount);
   })
 
-  test('[TC 01] verify unsuccessful log in', async ({ login }) => {
-    // TO-DO
+  test('[TC 01] verify negative username', async ({ login }) => {
+    await login._verifyNegativeUsername();
   });
+
+  test('[TC 02] verify negative password', async ({ login }) => {
+    await login._verifyNegativePassword();
+  });
+
 });
