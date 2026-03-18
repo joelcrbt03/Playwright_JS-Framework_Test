@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "test": "playwright test",
-    "test:headed": "playwright test --headed",
-    "test:url02": "cross-env ENV=TestURL02 playwright test",
-    "test:url03": "cross-env ENV=TestURL03 playwright test",
-    "test:url02:headed": "cross-env ENV=TestURL02 playwright test --headed",
-    "test:url03:headed": "cross-env ENV=TestURL03 playwright test --headed",
+    "test:basiclogin": "cross-env ENV=TestURL01 playwright test tests/testautomation_site",
+    "test:saucedemo": "cross-env ENV=TestURL02 playwright test tests/saucedemo_site",
     "allure:generate": "allure generate ./allure-results --clean",
     "allure:open": "allure open ./allure-report",
     "allure:report": "allure generate ./allure-results --clean && allure open ./allure-report"
@@ -21,4 +18,5 @@
   "dependencies": {
     "winston": "^3.18.3"
   }
+  
 }

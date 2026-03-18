@@ -10,17 +10,17 @@ test.beforeEach(async ({ common, basicLogin }) => {
 /*****************************
   BASIC LOGIN FLOW TEST CASE
 ******************************/
-test.describe('Basic Login Flow', () => {
+test.describe('Basic Positive Login Flow', {tag: ["@positive","@ID-001"] }, () => {
 
   test.beforeEach(async ({ basicLogin }) => {
     await basicLogin._loginToApp(testData.validAccount);
   });
 
-  test('[TC 01] verify successful log in', async ({ basicLogin }) => {
+  test('[TC01] verify successful log in', async ({ basicLogin }) => {
     await basicLogin._verifySuccessLogin("Success");
   });
 
-  test('[TC 02] logout account', async ({ basicLogin }) => {
+  test('[TC02] logout account', async ({ basicLogin }) => {
     await basicLogin._logoutToApp();
   });
 
@@ -30,14 +30,14 @@ test.describe('Basic Login Flow', () => {
 /*************************************
   BASIC NEGATIVE LOGIN FLOW TEST CASE
 **************************************/
-test.describe('Negative Login Flow', () => {
+test.describe('Basic Negative Login Flow', {tag: ["@negative","@ID-002"]}, () => {
 
-  test('[TC 01] verify negative username', async ({ basicLogin }) => {
+  test('[TC01] verify negative username', async ({ basicLogin }) => {
     await basicLogin._loginToApp(testData.invalidUsername);
     await basicLogin._verifyNegativeUsername();
   });
 
-  test('[TC 02] verify negative password', async ({ basicLogin }) => {
+  test('[TC02] verify negative password', async ({ basicLogin }) => {
     await basicLogin._loginToApp(testData.invalidPassword);
     await basicLogin._verifyNegativePassword();
   });
