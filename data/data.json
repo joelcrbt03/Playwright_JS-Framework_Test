@@ -1,14 +1,14 @@
 {
-  "adminAccount": {
-    "username": "admin",
-    "password": "admin"
-  },
-  "standardAccount": {
+  "validAccount": {
     "username": "student",
     "password": "Password123"
   },
-  "invalidAccount": {
-    "username": "wrong",
+  "invalidUsername": {
+    "username": "incorrectUser",
     "password": "1234"
+  },
+  "invalidPassword": {
+    "username": "student",
+    "password": "incorrectPassword"
   }
 }
