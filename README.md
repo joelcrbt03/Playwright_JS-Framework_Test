@@ -34,20 +34,23 @@ A modular and scalable UI test automation practice framework built using **Playw
 
 ## 📥 Running Test
 - Run all tests (headless using default test url):
+   > ‼ Not Recommended - this Framework as it is setup with different URLs 
    ```bash
    npm run test
-- Run tests with browser UI (headed):
+- Run basic test:
    ```bash
-   npm run test:headed
+   npm run test:basiclogin
+   npm run test:basiclogin -- --headed
 - Run test in different test url (saucedemo):
+
    > (Pre-Requisite) Install cross-env 
    ```bash
    npm install --save-dev cross-env
    ```  
    > Run Command
    ```bash
-   npm run test:url02
-   npm run test:url02:headed
+   npm run test:saucedemo
+   npm run test:saucedemo -- --headed
 - Run a single test file:
    ```bash
    npx playwright test tests/login.spec.js
