@@ -1,5 +1,5 @@
-const BasePage = require('../basepages/BasePage');
-const POM_LOGINPAGE = require('../pageobject/pom.LoginPage');
+const BasePage = require('../../basepages/BasePage');
+const POM_LOGINPAGE = require('../../pageobject/testautomation_pom/pom.LoginPage');
 
 class LoginActions extends BasePage {
   constructor(page) {
