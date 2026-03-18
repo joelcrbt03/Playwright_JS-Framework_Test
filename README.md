@@ -37,10 +37,12 @@ A modular and scalable UI test automation practice framework built using **Playw
    > Not Recommended - this Framework is setup with different URLs 
    ```bash
    npm run test
+   ```
 - Run basic test:
    ```bash
    npm run test:basiclogin
    npm run test:basiclogin -- --headed
+   ```
 - Run test in different test url (saucedemo):
    > (Pre-Requisite) Install cross-env 
    ```bash
@@ -50,9 +52,32 @@ A modular and scalable UI test automation practice framework built using **Playw
    ```bash
    npm run test:saucedemo
    npm run test:saucedemo -- --headed
+   ```
+- Run specific test cases
+   > Single TC
+   ```bash
+   npm run test:basiclogin -- --grep "TC01"
+   npm run test:basiclogin -- --headed --grep "TC01"
+   ```
+   > Multiple TCs (OR condition)
+   ```bash
+   npm run test:basiclogin -- --grep "TC01|TC02"
+   npm run test:basiclogin -- --headed --grep "TC01|TC02"
+   ```
+   > [RECOMMENDED] Specific @tag
+   ```bash
+   npm run test:basiclogin -- --grep "@ID-001"
+   npm run test:basiclogin -- --headed --grep "@ID-001"
+   ```
+   > [RECOMMENDED] Specific Test Case & @tag (AND condition)
+   ```bash
+   npm run test:basiclogin -- --grep "(?=.*TC01)(?=.*@ID-001)"
+   npm run test:basiclogin -- --headed --grep "(?=.*TC01)(?=.*@ID-001)"
+   ```
 - Run a single test file:
    ```bash
    npm playwright test tests/testautomation/basicLogin.spec.js
+   ```
 
 ---
 
