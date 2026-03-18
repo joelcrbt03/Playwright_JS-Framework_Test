@@ -56,29 +56,29 @@ A modular and scalable UI test automation practice framework built using **Playw
 ### Run Specific Test Cases & File
 
    - **[RECOMMENDED]** Specific @tag
-   ```bash
-   npm run test:basiclogin -- --grep "@ID-001"
-   npm run test:basiclogin -- --headed --grep "@ID-001"
-   ```
+      ```bash
+      npm run test:basiclogin -- --grep "@ID-001"
+      npm run test:basiclogin -- --headed --grep "@ID-001"
+      ```
    - **[RECOMMENDED]** Specific Test Case & @tag (AND Condition)
-   ```bash
-   npm run test:basiclogin -- --grep "(?=.*TC01)(?=.*@ID-001)"
-   npm run test:basiclogin -- --headed --grep "(?=.*TC01)(?=.*@ID-001)"
-   ```
+      ```bash
+      npm run test:basiclogin -- --grep "(?=.*TC01)(?=.*@ID-001)"
+      npm run test:basiclogin -- --headed --grep "(?=.*TC01)(?=.*@ID-001)"
+      ```
    - Specific TC No.
-   ```bash
-   npm run test:basiclogin -- --grep "TC01"
-   npm run test:basiclogin -- --headed --grep "TC01"
-   ```
+      ```bash
+      npm run test:basiclogin -- --grep "TC01"
+      npm run test:basiclogin -- --headed --grep "TC01"
+      ```
    - Multiple Specific TC No. (OR Condition)
-   ```bash
-   npm run test:basiclogin -- --grep "TC01|TC02"
-   npm run test:basiclogin -- --headed --grep "TC01|TC02"
-   ```
+      ```bash
+      npm run test:basiclogin -- --grep "TC01|TC02"
+      npm run test:basiclogin -- --headed --grep "TC01|TC02"
+      ```
    - Run a single test file:
-   ```bash
-   npm playwright test tests/testautomation/basicLogin.spec.js
-   ```
+      ```bash
+      npm playwright test tests/testautomation/basicLogin.spec.js
+      ```
 
 ---
 
@@ -87,6 +87,8 @@ A modular and scalable UI test automation practice framework built using **Playw
    ```bash
    npm install -g allure-commandline
    npm install -D allure-playwright
+   ```
 - Generate & Open Report
    ```bash
    npm run allure:report
+   ```
