@@ -1,11 +1,11 @@
 class POM_LOGINPAGE {
   constructor() {
-    this.username = 'input[id=username]';
-    this.password = 'input[id=password]';
-    this.submit = 'button[id=submit]';
-    this.error = 'div[id=error]';
-    this.successText = 'h1[class=post-title]';
-    this.logoutBtn = "//a[text()='Log out']"
+    this.username_field = 'input[id=username]';
+    this.password_field = 'input[id=password]';
+    this.submit_button = 'button[id=submit]';
+    this.error_text = 'div[id=error]';
+    this.success_text = 'h1[class=post-title]';
+    this.logout_button = "//a[text()='Log out']"
   }
 }
 
