@@ -18,6 +18,9 @@ const test = fixture.extend({
   },
   saucedemoLogin: async ({ page }, use) => {
     await use(new SauceDemoLoginActions(page));
+  },
+  saucedemoMain: async ({ page }, use) => {
+    await use(new SauceDemoMainActions(page));
   }
 });
 
