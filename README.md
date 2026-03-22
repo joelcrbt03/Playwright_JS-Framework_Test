@@ -34,7 +34,6 @@ A modular and scalable UI test automation practice framework built using **Playw
 
 ## 📥 Running Test Commands
 - Run all tests (headless using default test url):
-   > Not Recommended - This Framework is setup with different URLs. Unlikely to be used in real time projects.
    ```bash
    npm run test
    ```
