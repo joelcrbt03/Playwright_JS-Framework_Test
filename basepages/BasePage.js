@@ -94,7 +94,7 @@ class BasePage {
     }
   }
 
-  async verifyElementText(locator, expectedText) {
+  async verifyElementTextEquals(locator, expectedText) {
     const element = this.page.locator(locator);
     try {
       const actualText = await this.getText(locator);
