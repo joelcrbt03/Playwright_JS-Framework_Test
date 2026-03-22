@@ -94,6 +94,18 @@ class BasePage {
     }
   }
 
+  async verifyElementText(locator, expectedText) {
+    const element = this.page.locator(locator);
+    try {
+      const actualText = await this.getText(locator);
+      await expect(element).toHaveText(expectedText);
+      this.logger.info(`[PASS] | Expected text "${expectedText}" matches element "${locator}"! Actual text: "${actualText}"`);
+    } catch (error) {
+      this.logger.error(`[FAIL] | Expected text does NOT match!\nExpected Text: "${expectedText}" \nActual text: "${actualText}" \nReason: ${error}`);
+      throw error;
+    }
+  }
+
   /* 
   ----------------------------------------                   
             WAIT METHODS                    
