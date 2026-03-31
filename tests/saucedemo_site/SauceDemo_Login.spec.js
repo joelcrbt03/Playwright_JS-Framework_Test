@@ -15,7 +15,6 @@ test.describe('[Sauce Demo] Test Login Flow', {tag: ["@ID-101"]}, () => {
   test('[TC01] Login with standard user', async ({ saucedemoLogin, saucedemoMain }) => {
         await saucedemoLogin._loginToApp(testData.standardUser);
         await saucedemoMain._verifyMainPageTitle()
-        this.logger.info("[TEST PASSED] | Standard user login successful.");
     });
 
   test('[TC02] Login with locked out user', async ({ saucedemoLogin }) => {
